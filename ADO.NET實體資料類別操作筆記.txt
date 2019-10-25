@@ -1,0 +1,27 @@
+使用Entity Framework的開發方式有三種：Code First、 Model First與Database First
+	1)Database First：由資料庫產生模型，如果有DBA的角色存在，那就是DBA怎麼規劃資料庫，你就乖乖照著用
+		//大部分都是用這個
+		//一樣可以快速產生controller CRUD的方式
+		//參考https://ithelp.ithome.com.tw/articles/10161127
+	2)Model First：透過Entity Framework的工具設計模型後再建立資料庫
+		//參考https://ithelp.ithome.com.tw/articles/10160947
+		//可以快速產生controller CRUD的方式
+	3)Code First：使用程式碼定義模型後再建立資料庫
+		//不會用到
+
+.edmx:在runtime時由三個部份組成，這邊就可以觀察到ORM(使用XML方式開啟)
+	SSDL：定義實體資料庫，例如資料表或預存程序
+	CSDL：定義模型類別，一個類別稱為一個Entity
+	MSL(C-S Mapping)：對應資料庫Table與Entity物件
+.Context.tt:用來產生資料庫連線的程式碼產生器
+.edmx.diagram:用來定義edmx設計畫面entity在畫面上的位置
+.tt，用來產生每一個模型的程式碼檔案，有幾個資料表就會產生幾個.cs類別檔
+
+Modle驗證
+//參考https://ithelp.ithome.com.tw/articles/10161232
+	  https://ithelp.ithome.com.tw/articles/10161328
+
+LINQ to Entities:	  
+//參考https://ithelp.ithome.com.tw/articles/10161589
+泛型介面
+//參考https://dotblogs.com.tw/atowngit/2011/03/09/21758
